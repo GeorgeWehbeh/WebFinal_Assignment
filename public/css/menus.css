@@ -1,0 +1,253 @@
+.logo{
+width: 50%;
+height:auto;
+}
+
+
+#menuoptions{
+width: 60%;
+height:auto;
+    }
+    #menuimg{
+        max-width: 24%;
+        max-height: 10%;
+        display:inline-block;   
+        }
+
+.recovery{
+font-size: 10pt;
+font-style: italic;
+color: deepskyblue ;
+}
+
+.herodiv{
+margin:auto;
+width: 80%;
+height: auto;
+
+}
+#hero{
+width: 100%;
+height:auto;
+padding-right: 10%;
+}
+
+.loginfield{
+width:400px;
+height:auto;
+text-align: center;
+}
+#socialmedia{
+width: 20%;
+height:auto;
+padding-right: 15px;
+}
+#logOR{
+    width: 80%;
+    height:10%; 
+}
+#password{
+width: 90%;
+height:15%;
+}
+#email{
+    width: 90%;
+    height:15%;
+}
+#label1{
+padding-right: 66%;
+font-weight: bold;
+}
+#label2{
+    padding-right: 74%;
+    font-weight: bold;
+    }
+    #label3{
+        padding-left: 60%;
+        
+        }
+
+#loginbuttondiv{
+padding-right: 70%;
+}
+#loginbutton{
+    background-color: cornflowerblue;
+    font-size: 14pt;
+}
+#first{
+padding-right: 72%;
+font-weight: bold;
+}
+#second{
+    padding-right: 72%;
+    font-weight: bold;
+}
+ #third{
+     padding-right: 66%;
+    font-weight: bold;
+ }
+#fourth{
+    padding-right: 84%;
+    font-weight: bold;
+}
+#fifth{
+    padding-right: 74%;
+    font-weight: bold;
+}
+    #sixth{
+        padding-right: 58%;
+        font-weight: bold;
+    }
+#maintitle{
+font-weight: bold;
+font-size: 22pt;
+text-decoration: underline;
+padding-left: 3%;
+}
+#left{
+    font-size: 18pt;
+width: 40%;
+height:auto;
+padding-left: 1%;
+float: left;
+}
+#right{
+    width: 50%;
+    height:auto;
+    padding-left: 5%;
+    float: left;
+
+}
+#rightimg{
+    width: 90%;
+    height: auto;
+    float: right;
+padding-left: 3%;
+padding-bottom: 3%;
+}
+#footer{
+    color: cornsilk;
+    width: 100%;
+    height: 140px;
+    clear: both;
+    }
+#foot{
+float:left;
+padding-left: 15px;
+padding-top: 100px;
+}
+#socialmediafoot{
+    padding-top: 5%;
+width:29%;
+height:auto;
+vertical-align: bottom;
+}
+#socialmediafootdiv{
+
+    padding-left: 89%;
+}
+#menuitems{
+    clear: left;  
+}
+#pic{
+width: 90%;
+height: auto;
+padding-top: 3%;
+padding-left: 2%;
+padding-right: 8%;
+
+}
+#topdeal{
+font-weight: bold;
+text-decoration: underline;
+font-size: 22pt;
+padding-left: 3%;
+}
+#element{
+    padding-left: 2%;
+    width: 90%;
+    height: auto;
+    font-size: 18pt;
+}
+#menuItemDiv0, #menuItemDiv1{
+    float: left;
+    width: 40%;
+    height: auto;
+}
+
+#menuItemDiv2, #menuItemDiv3{
+    float: left;
+    width: 40%;
+    height: auto;
+
+}
+#menuItemDiv2{
+    clear: left;
+}
+#menuItemDiv4, #menuItemDiv5{
+    float: left;
+    width: 40%;
+    height: auto;
+padding-bottom: 10%;
+ }
+ #menuItemDiv4{
+clear: left;
+
+ }
+ #elementTop{
+    padding-left: 2%;
+    font-size: 18pt;
+     float:left;
+ }
+ #topimg{
+     padding-left: 1%;
+     width: 6%;
+     height: auto;
+ }
+ #mealpkghead{
+     padding-left: 4%;
+     font-weight: bold;
+     text-decoration: underline;
+     font-size: 35pt;
+     padding-bottom: 4%;
+ }
+ .errMessage{
+    color: crimson;
+    text-align: left;
+    padding-left: 18px;
+
+ }
+#confirmimg{
+width: 30%;
+height: auto;
+margin-bottom: 0em;
+}
+#confirmword{
+font-size: 40pt;    
+margin-top: 0em;
+padding-left: 20px;
+}
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    #mobile{
+      width:100%;
+      font-size: 5pt;
+}
+    .loginfield{
+        width: 70%;
+        height: auto;
+    }
+    #menuoptions{
+        width: 100%;
+        height:auto;
+            }
+    #menuimg{
+        max-width: 20%;
+        max-height: 8%;
+        display:inline-block;   
+    }
+    #label3, #loginbutton{
+        font-size: 7pt;
+    }
+
+}

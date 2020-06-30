@@ -1,0 +1,74 @@
+<div id = "mobile">
+<div style="background-image: url('images/headerbg.jpg');">
+<h2 class= "logo"><img src="images/logo.png"></h2>
+
+    <div id= menuoptions>
+            <a href= "/"><img src="images/mainmenu.jpg" id= "menuimg"></a>
+            <a href="/login"> <img src="images/login.jpg" id= "menuimg"></a>
+            <a href="/registration"> <img src="images/signup.jpg" id= "menuimg"></a>
+            <a href="/MealPkg"> <img src="images/mealpkg.jpg" id= "menuimg"></a>
+        </div>
+        </div>
+          </br>
+<body>
+ <fieldset class= "loginfield"> 
+            <legend>Create your account:</legend>
+            </br>
+             <a href="https://www.facebook.com/"> <img src="images/facebook.jpg" id= "socialmedia"></a>
+  <a href="https://twitter.com/"> <img src="images/twitter.png" id= "socialmedia"></a>
+  <a href="https://www.instagram.com/"> <img src="images/instagram.jpg" id= "socialmedia"></a>
+            </br> </br>
+             <img src="images/loginOR.png" id= "logOR"></a>
+            <form action="/registration" method="POST">
+
+            <label for="firstname" id="first">First Name:</label></br>
+            <input type="text"  id="email" name="firstname" ></br>
+            {{#each errorMessages}}
+            <div class = "errMessage" >{{this}}</div>
+            {{/each}}
+
+            <label for="lastname" id="second">Last Name:</label></br>
+            <input type="text"  id="email" name="lastname" ></br>
+            {{#each errorMessages}}
+            <div class = "errMessage" >{{this}}</div>
+            {{/each}}
+
+            <label for="email" id="third">Email Address:</label></br>
+            <input type="text" id="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" ></br>
+            {{#each errorMessages}}
+            <div class = "errMessage" >{{this}}</div>
+            {{/each}}
+
+            <label for="sin" id="fourth">SIN:</label></br>
+            <input type="text"  id="email" name="sin" ></br>
+
+            <label for="password" id="fifth">Password:</label> </br>
+            <input type="password" id="password" name="password" ></br>
+            {{#each errorMessages}}
+            <div class = "errMessage" >{{this}}</div>
+            {{/each}}
+            
+           <div  id="loginbuttondiv">
+            <button id="loginbutton">Sign Up!</button>
+            </div>
+             </br> </br> </br> </br> </br>
+            </form>
+            </legend>
+            </fieldset>
+ </br> </br> </br> </br></br> </br></br></br></br>
+<div style="background-image: url('images/footer.png');" id="footer"> 
+<footer >
+
+<p id="foot">Our Moto! (Scroll up!!!)</p>
+<p id="foot">About Us! (Scroll up!!!)</p>
+<p id="foot">Contact Us! (Not available right now)</p>
+<div id= "socialmediafootdiv">
+  <a href="https://www.facebook.com/"> <img src="images/facebook.jpg" id= "socialmediafoot"></a>
+  <a href="https://twitter.com/"> <img src="images/twitter.png" id= "socialmediafoot"></a>
+  <a href="https://www.instagram.com/"> <img src="images/instagram.jpg" id= "socialmediafoot"></a>
+</div>
+</footer>
+</div>
+</body>
+
+</div>
