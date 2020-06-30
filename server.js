@@ -3,7 +3,6 @@ const app = express();
 const exphbs = require('express-handlebars');
 const path = require("path");
 const { urlencoded } = require('express');
-const PORT = process.env.PORT || 8080;
 require('dotenv').config({
     path:"./config/keys.env"});
 app.engine('handlebars', exphbs({
