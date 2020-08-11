@@ -269,6 +269,22 @@ font-size: 20pt;
 color: black;
 text-decoration: none;
 }
+#meal1{
+ font-weight: bold;
+ padding-right: 71%;   
+}
+#meal2{
+    font-weight: bold;
+    padding-right: 73%;   
+   }
+   #meal3{
+    font-weight: bold;
+    padding-right: 62%;   
+   }
+   #meal4{
+    font-weight: bold;
+    padding-right: 17%;   
+   }
 
 @media only screen and (max-width:620px) {
     /* For mobile phones: */
