@@ -22,5 +22,20 @@ router.get('/recover', (req, res) =>{
 router.get('/confirmation', (req, res) =>{
     res.render('confirmation');
 });
+router.get('/emailTaken', (req, res) =>{
+    res.render('emailTaken');
+});
 
+router.get('/user', (req, res) =>{
+    res.render('user');
+});
+router.get('/admin', (req, res) =>{
+    res.render('admin');
+});
+
+router.get('/logout', function (req, res) {
+    req.session.destroy();
+    res.redirect('/login');
+    console.log("Session terminated");
+});
 module.exports = router;

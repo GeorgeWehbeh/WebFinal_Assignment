@@ -1,12 +1,12 @@
+ {{#if user.firstname}}
 <div id = "mobile">
 <div style="background-image: url('images/headerbg.jpg');">
 <h2 class= "logo"><img src="images/logo.png"></h2>
-
     <div id= menuoptions>
             <a href= "/"><img src="images/mainmenu.jpg" id= "menuimg"></a>
             <a href="/registration"> <img src="images/signup.jpg" id= "menuimg"></a>
             <a href="/MealPkg"> <img src="images/mealpkg.jpg" id= "menuimg"></a>
-              {{#if user.firstname}}
+          {{#if user.firstname}}
             <a href="/logout"> <img src="images/out.jpg" id= "menuimg"></a>
             {{else}}
             <a href="/login"> <img src="images/login.jpg" id= "menuimg"></a>
@@ -15,64 +15,76 @@
         </div>
           </br>
 <body>
- <fieldset class= "loginfield"> 
-            <legend>Create your account:</legend>
+ </br>
+<h2>Welcome {{user.firstname}} {{user.lastname}} you are an administrator!</h2>
+</br></br>
+<fieldset class= "addMealField">
+         <img src="images/addMeal.png" id= "logOR"></a>
+            <legend>Add Meal:</legend>
+            <form action="/admin" method="POST">
+            <input type="file" id="imginput" name="imagename" /></br>
+          
+            <label for="email" id="meallabel1">Meal:</label></br>
+            <input type="text" id="email" name="mealName" ></br>
+            {{#each errorMessages}}
+            <div class = "errMessage" >{{this}}</div>
+            {{/each}}
+            <label for="description" id="meallabel2">Description:</label>
             </br>
-             <a href="https://www.facebook.com/"> <img src="images/facebook.jpg" id= "socialmedia"></a>
-  <a href="https://twitter.com/"> <img src="images/twitter.png" id= "socialmedia"></a>
-  <a href="https://www.instagram.com/"> <img src="images/instagram.jpg" id= "socialmedia"></a>
-            </br> </br>
-             <img src="images/loginOR.png" id= "logOR"></a>
-            <form action="/confirmation" method="POST">
-
-            <label for="firstname" id="first">First Name:</label></br>
-            <input type="text"  id="email" name="firstname" ></br>
+            <input type="text" id="password" name="mealDesc" ></br>
             {{#each errorMessages}}
             <div class = "errMessage" >{{this}}</div>
             {{/each}}
-
-            <label for="lastname" id="second">Last Name:</label></br>
-            <input type="text"  id="email" name="lastname" ></br>
+            <label for="email" id="meallabel3">Price:</label></br>
+            <input type="text" id="email" name="mealPrice" ></br>
             {{#each errorMessages}}
             <div class = "errMessage" >{{this}}</div>
             {{/each}}
-
-            <label for="email" id="third">Email Address:</label></br>
-            <input type="text" id="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" ></br>
+            <label for="email" id="meallabel4">Top Package(Y or y if true):</label></br>
+            <input type="text" id="email" name="topPackage" pattern = "[yY]" ></br>
             {{#each errorMessages}}
             <div class = "errMessage" >{{this}}</div>
             {{/each}}
-
-            <label for="sin" id="fourth">SIN:</label></br>
-            <input type="text"  id="email" name="sin" ></br>
-
-            <label for="password" id="fifth">Password:</label> </br>
-            <input type="password" id="password" name="password" ></br>
-            {{#each errorMessages}}
-            <div class = "errMessage" >{{this}}</div>
+            </br>
+            </br>
+            {{#each err}}
+              <div class ="err">{{this}}</div>
             {{/each}}
-            
-           <div  id="loginbuttondiv">
-            <button id="loginbutton">Sign Up!</button>
-            </div>
-             </br> </br> </br> </br> </br>
-            </form>
-            </legend>
+            <div  id="loginbuttondiv">
+            <button id="loginbutton">Create Meal</button></div>
+            <a href= "/updatableMeals"> Update Existing Meal</a>
             </fieldset>
- </br> </br> </br> </br></br> </br></br></br></br>
+
+</br>
+    {{#each confirmationMessage}}
+              <div class ="confirm">{{this}}</div>
+            {{/each}}
+</br></br></br></br>
+</br></br></br></br>
+</br></br></br></br>
+</br></br></br></br></br>
+</br></br></br></br>
+</br></br></br></br>
+</br></br></br></br></br>
+</br></br></br>
+
+
 <div style="background-image: url('images/footer.png');" id="footer"> 
 <footer >
 
 <p id="foot">Our Moto! (Scroll up!!!)</p>
 <p id="foot">About Us! (Scroll up!!!)</p>
 <p id="foot">Contact Us! (Not available right now)</p>
+</footer>
+
 <div id= "socialmediafootdiv">
   <a href="https://www.facebook.com/"> <img src="images/facebook.jpg" id= "socialmediafoot"></a>
   <a href="https://twitter.com/"> <img src="images/twitter.png" id= "socialmediafoot"></a>
   <a href="https://www.instagram.com/"> <img src="images/instagram.jpg" id= "socialmediafoot"></a>
 </div>
-</footer>
 </div>
 </body>
-
 </div>
+    {{else}}
+    <p>Error you are not logged in!</p>
+{{/if}}

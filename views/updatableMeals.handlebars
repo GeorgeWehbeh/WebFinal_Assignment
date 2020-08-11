@@ -1,48 +1,21 @@
+ {{#if user.firstname}}
 <div id = "mobile">
 <div style="background-image: url('images/headerbg.jpg');">
 <h2 class= "logo"><img src="images/logo.png"></h2>
     <div id= menuoptions>
-            <a href= "/"><img src="images/mainmenu.jpg" id= "menuimg"></a>       
+            <a href= "/"><img src="images/mainmenu.jpg" id= "menuimg"></a>
             <a href="/registration"> <img src="images/signup.jpg" id= "menuimg"></a>
             <a href="/MealPkg"> <img src="images/mealpkg.jpg" id= "menuimg"></a>
-          {{#if user.firstname}}
+                      {{#if user.firstname}}
             <a href="/logout"> <img src="images/out.jpg" id= "menuimg"></a>
             {{else}}
             <a href="/login"> <img src="images/login.jpg" id= "menuimg"></a>
             {{/if}}
-            <h2>{{user.firstname}} {{user.lastname}}</h2>
         </div>
         </div>
 
           </br>
 <body>
-  <div class="herodiv">
-<img src="images/hero.png" id= "hero">
-</div>
-
-<h3 id="maintitle">Our Moto!</h3>
-<div id="left">
-<p id="mainpar">We strive to bring our customers the best service ever and everyone apreciates
-  it so much. This company is cool. Look! Pick, heat, eat, repeat! What more could
-  you ever want from a service ever! Sugoi desu!!!
-</p>
-</br></br>
-<h3 id="maintitle">About Us!</h3>
-<p>Look at this paragraph if you wish to learn more about us and our company
- we are cool and there is a lot of information to put in this section so keep
- reading. But enough about us, tell us about you and we'll have a meal plan 
- put together for you in no time to make you healthy and as cool as our company
- which I'm not sure if I've already told you this but we are really cool!
-</p>
-</br></br></br></br></br>
-</div>
-<div id="right">
-  <img src="images/morefood.jpg" id= "rightimg">
-
-</div>
-
-<div id="menuitems">
-<p id="topdeal">Our Top Deals!!!</p>
 <table style="text-align: center;">
         <thead>
                 <th id = "talbeHead">Image </th>
@@ -53,16 +26,16 @@
         </thead>
         <tbody>
             {{#each data}}
-           {{#if this.topPackage}}
                 <tr>
                   <td>
-                   <img src= "images/mealPack0.jpg" id = "placeholder">
+                    <img src = "images/mealPack0.jpg" id = "placeholder">
                   </td>
                    <td>
                         <span>{{this.mealName}}</span>
                    </td>
                    <td>
                        <span>{{this.mealPrice}}</span>
+                      
                    </td>
                    <td>
                         <span>{{this.mealDesc}}</span>
@@ -72,27 +45,36 @@
                      <img src = "images/topMenu.jpg">
                      {{/if}}
                    </td>
+                    <td>
+                        <a href="/updatableMeals/{{this.id}}?method=PUT">Edit</a>
+                   </td> 
                 </tr>
-                {{/if}}
                 {{/each}}
     </tbody>
-    </table>  
-</div>
+    </table>
 
-
+</br></br></br></br></br></br></br>
+ </br> </br> </br> </br></br> </br></br></br></br>
+  </br> </br> </br> </br></br> </br></br></br></br>
+   </br> </br> </br> </br></br> </br></br></br></br>
+    </br> </br> </br> </br></br> </br></br></br></br></br>
 <div style="background-image: url('images/footer.png');" id="footer"> 
 <footer >
 
 <p id="foot">Our Moto! (Scroll up!!!)</p>
 <p id="foot">About Us! (Scroll up!!!)</p>
 <p id="foot">Contact Us! (Not available right now)</p>
-</footer>
-
 <div id= "socialmediafootdiv">
   <a href="https://www.facebook.com/"> <img src="images/facebook.jpg" id= "socialmediafoot"></a>
   <a href="https://twitter.com/"> <img src="images/twitter.png" id= "socialmediafoot"></a>
   <a href="https://www.instagram.com/"> <img src="images/instagram.jpg" id= "socialmediafoot"></a>
 </div>
+</footer>
 </div>
 </body>
+
+</body>
 </div>
+    {{else}}
+    <p>Error you are not logged in!</p>
+{{/if}}

@@ -3,9 +3,13 @@
 <h2 class= "logo"><img src="images/logo.png"></h2>
     <div id= menuoptions>
             <a href= "/"><img src="images/mainmenu.jpg" id= "menuimg"></a>
-            <a href="/login"> <img src="images/login.jpg" id= "menuimg"></a>
             <a href="/registration"> <img src="images/signup.jpg" id= "menuimg"></a>
             <a href="/MealPkg"> <img src="images/mealpkg.jpg" id= "menuimg"></a>
+                      {{#if user.firstname}}
+            <a href="/logout"> <img src="images/out.jpg" id= "menuimg"></a>
+            {{else}}
+            <a href="/login"> <img src="images/login.jpg" id= "menuimg"></a>
+            {{/if}}
         </div>
 </div>
 </br>
@@ -33,6 +37,9 @@
             <a class= "recovery" href="/recover" id="label3">Forgot your password?</a>
             </br>
             </br>
+            {{#each err}}
+              <div class ="err">{{this}}</div>
+            {{/each}}
             <div  id="loginbuttondiv">
             <button id="loginbutton">Log In!</button></div>
             </br></br></br></br></br></br></br>

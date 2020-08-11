@@ -9,8 +9,8 @@ width: 60%;
 height:auto;
     }
     #menuimg{
-        max-width: 24%;
-        max-height: 10%;
+        width: 15%;
+        height: 10%;
         display:inline-block;   
         }
 
@@ -36,6 +36,11 @@ padding-right: 10%;
 width:400px;
 height:auto;
 text-align: center;
+}
+.addMealField{
+    width: 700px;
+    height: auto;
+    text-align: center;
 }
 #socialmedia{
 width: 20%;
@@ -66,7 +71,22 @@ font-weight: bold;
         padding-left: 60%;
         
         }
-
+#meallabel1{
+    padding-right: 86%;
+    font-weight: bold;
+}
+#meallabel2{
+    padding-right: 80%;
+    font-weight: bold;
+}
+#meallabel3{
+    padding-right: 86%;
+    font-weight: bold;
+}
+#meallabel4{
+    padding-right: 64%;
+    font-weight: bold;
+}
 #loginbuttondiv{
 padding-right: 70%;
 }
@@ -227,6 +247,25 @@ font-size: 40pt;
 margin-top: 0em;
 padding-left: 20px;
 }
+.pppp{
+    font-size: 750pt;
+}
+.confirm{
+font-size: 60pt;
+
+}
+#talbeHead{
+text-decoration: underline;
+font-size: 20pt;
+}
+#placeholder{
+    width: 50%;
+    height: auto;
+}
+#imginput{
+    padding-right: 65%;
+}
+
 @media only screen and (max-width:620px) {
     /* For mobile phones: */
     #mobile{
@@ -237,13 +276,17 @@ padding-left: 20px;
         width: 70%;
         height: auto;
     }
+    .addMealField{
+        width: 80%;
+        height: auto;
+    }
     #menuoptions{
         width: 100%;
         height:auto;
             }
     #menuimg{
-        max-width: 20%;
-        max-height: 8%;
+        width: 15%;
+        height: 8%;
         display:inline-block;   
     }
     #label3, #loginbutton{

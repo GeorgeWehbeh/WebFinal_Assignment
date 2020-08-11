@@ -4,18 +4,51 @@
 
     <div id= menuoptions>
             <a href= "/"><img src="images/mainmenu.jpg" id= "menuimg"></a>
-            <a href="/login"> <img src="images/login.jpg" id= "menuimg"></a>
             <a href="/registration"> <img src="images/signup.jpg" id= "menuimg"></a>
             <a href="/MealPkg"> <img src="images/mealpkg.jpg" id= "menuimg"></a>
+                      {{#if user.firstname}}
+            <a href="/logout"> <img src="images/out.jpg" id= "menuimg"></a>
+            {{else}}
+            <a href="/login"> <img src="images/login.jpg" id= "menuimg"></a>
+            {{/if}}
         </div>
         </div>
           </br>
 <body>
   <h2 id = "mealpkghead">Browse our many Meal Packages</h2>
-<div id="menuitems">
-
-  
-</div>
+<table style="text-align: center;">
+        <thead>
+                <th id = "talbeHead">Image </th>
+                <th id = "talbeHead">Meal Name</th>
+                <th id = "talbeHead">Meal Price</th>
+                <th id = "talbeHead">Meal Description</th>
+                <th id = "talbeHead">Top Package</th>
+        </thead>
+        <tbody>
+            {{#each data}}
+                <tr>
+                  <td>
+                    <img src = "images/mealPack0.jpg" id = "placeholder">
+                  </td>
+                   <td>
+                        <span>{{this.mealName}}</span>
+                   </td>
+                   <td>
+                       <span>{{this.mealPrice}}</span>
+                      
+                   </td>
+                   <td>
+                        <span>{{this.mealDesc}}</span>
+                   </td>
+                   <td>
+                     {{#if this.topPackage}}
+                     <img src = "images/topMenu.jpg">
+                     {{/if}}
+                   </td>
+                </tr>
+                {{/each}}
+    </tbody>
+    </table>
 </br></br></br></br></br></br></br>
 <div style="background-image: url('images/footer.png');" id="footer"> 
 <footer >

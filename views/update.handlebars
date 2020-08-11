@@ -1,3 +1,4 @@
+ {{#if user.firstname}}
 <div id = "mobile">
 <div style="background-image: url('images/headerbg.jpg');">
 <h2 class= "logo"><img src="images/logo.png"></h2>
@@ -16,9 +17,32 @@
           </br>
 <body>
  </br>
-<img src="images/confirm.jpg" id= "confirmimg">
-<p id = "confirmword">Thanks for signing up!</p>
-</br></br>
+</br>
+<fieldset class= "loginfield">
+                       
+            <form method="POST" action="/Cupdate/{{this.id}}?method=PUT">
+            <legend>Update Meal</legend>
+            <br>
+            <label for="mealName" id="meal">Meal Name:</label></br>
+            <input type="text" id="meal" name="mealName"></br></br>
+            <br>
+            <label for="mealPrice" id="meal">Meal Price:</label></br>
+            <input type="text" id="meal" name="mealPrice"></br>
+            <br>
+            <label for="mealDesc" id="meal">Meal Description:</label></br>
+            <input type="text" id="meal" name="mealDesc"></br>
+            <br>
+            <label for="topPackage" id="meal">Is this meal a top package? (Enter y or n):</label></br>
+            <input type="text" id="meal" name="topPackage" pattern="[ynYN]"></br>
+            <br>
+            <input type="submit" name="submit" value="Update">
+
+            </br></br></br></br></br></br></br>
+            </form>
+            </legend>
+            </fieldset>
+
+</br>
 </br></br></br></br></br>
 </br></br></br></br>
 </br></br></br></br>
@@ -45,3 +69,6 @@
 </div>
 </body>
 </div>
+    {{else}}
+    <p>Error you are not logged in!</p>
+{{/if}}

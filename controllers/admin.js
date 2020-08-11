@@ -16,9 +16,11 @@ router.get('/registration', (req, res) =>{
 router.get('/login', (req, res) =>{
     res.render('login');
 });
+
 router.get('/recover', (req, res) =>{
     res.render('recover');
 });
+
 router.get('/confirmation', (req, res) =>{
     res.render('confirmation');
 });
@@ -29,6 +31,7 @@ router.get('/emailTaken', (req, res) =>{
 router.get('/user', (req, res) =>{
     res.render('user');
 });
+
 router.get('/admin', (req, res) =>{
     res.render('admin');
 });
