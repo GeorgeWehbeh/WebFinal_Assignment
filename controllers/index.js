@@ -222,7 +222,7 @@ router.put('/updatableMeals/:id', (req, res) =>
     res.redirect('/update');
 });
 
-router.put("/Cupdate",(req,res)=>{
+router.put("/Theupdate",(req,res)=>{
     const confirmationMessage = [];
     const meal =
     {
